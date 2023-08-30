@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		028183FF71665B8F0F2A9668 /* Pods_MemoRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B33C87F9BF7D628EC1BD417 /* Pods_MemoRxSwift.framework */; };
 		08AB122B2A9F122B0005608D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB122A2A9F122B0005608D /* AppDelegate.swift */; };
 		08AB122D2A9F122B0005608D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB122C2A9F122B0005608D /* SceneDelegate.swift */; };
 		08AB122F2A9F122B0005608D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB122E2A9F122B0005608D /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		08AB12332A9F122D0005608D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08AB12362A9F122D0005608D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08AB12382A9F122D0005608D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B33C87F9BF7D628EC1BD417 /* Pods_MemoRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		398BCAC80CF236E0543FC6A5 /* Pods-MemoRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoRxSwift.release.xcconfig"; path = "Target Support Files/Pods-MemoRxSwift/Pods-MemoRxSwift.release.xcconfig"; sourceTree = "<group>"; };
+		42E08D5D1380A1AFCC088862 /* Pods-MemoRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-MemoRxSwift/Pods-MemoRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028183FF71665B8F0F2A9668 /* Pods_MemoRxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				08AB12292A9F122B0005608D /* MemoRxSwift */,
 				08AB12282A9F122B0005608D /* Products */,
+				D1D64EB1856BC07C7C9BECE2 /* Pods */,
+				F928175FC216ABEE95F3CFBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = MemoRxSwift;
 			sourceTree = "<group>";
 		};
+		D1D64EB1856BC07C7C9BECE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42E08D5D1380A1AFCC088862 /* Pods-MemoRxSwift.debug.xcconfig */,
+				398BCAC80CF236E0543FC6A5 /* Pods-MemoRxSwift.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F928175FC216ABEE95F3CFBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B33C87F9BF7D628EC1BD417 /* Pods_MemoRxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08AB123B2A9F122D0005608D /* Build configuration list for PBXNativeTarget "MemoRxSwift" */;
 			buildPhases = (
+				CA6FC780D2E390F914001BE6 /* [CP] Check Pods Manifest.lock */,
 				08AB12232A9F122B0005608D /* Sources */,
 				08AB12242A9F122B0005608D /* Frameworks */,
 				08AB12252A9F122B0005608D /* Resources */,
+				05109B60F187A3EC4657B050 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05109B60F187A3EC4657B050 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoRxSwift/Pods-MemoRxSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoRxSwift/Pods-MemoRxSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoRxSwift/Pods-MemoRxSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA6FC780D2E390F914001BE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemoRxSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08AB12232A9F122B0005608D /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		08AB123C2A9F122D0005608D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E08D5D1380A1AFCC088862 /* Pods-MemoRxSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +364,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +380,7 @@
 		};
 		08AB123D2A9F122D0005608D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 398BCAC80CF236E0543FC6A5 /* Pods-MemoRxSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,6 +393,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
