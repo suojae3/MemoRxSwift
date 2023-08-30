@@ -1,50 +1,57 @@
-# RxSwift 사용할 때와 사용하지 않았을 때 비교해보기
+## RxSwift 사용할 때와 사용하지 않았을 때 비교해보기
 
+#
 
-1. 기존에 테이블뷰를 만들었을 때 작성하는 코드
-```Swift
-import UIKit
+### 비교1: 데이터 관리
+```swift
+//RxSwift
+private var memos: BehaviorRelay<[Memo]> = BehaviorRelay(value: [])
+```
+```swift
+//Traditional
+private var memos: [Memo] = [] 
+```
+- `BehaviorRelay` 라는 관찰되는(observable) 배열을 통해 변경사항을 자동적으로 반영한다
+- 기존의 배열같은 경우 변경사항을 반영하려면 `tableView.reloadData()`을 매번 써줘야했음
 
-class ViewController: UIViewController, UITextFieldDelegate {
-    
-    let textField = UITextField()
-    let label = UILabel()
+#
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        textField.delegate = self
-    }
+### 비교2: 테이블뷰 셋팅
+```swift
+//RxSwift
+memos.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: UITableViewCell.self)) { (row, memo, cell) in
+    cell.textLabel?.text = memo.content
+}
+.disposed(by: disposeBag)
+```
+```swift
+//Traditional
+tableView.delegate = self
+tableView.dataSource = self
+```
 
-    // MARK: - UITextFieldDelegate
+#
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let currentText = textField.text ?? ""
-        let newText = (currentText as NSString).replacingCharacters(in: range, with: string)
-        label.text = newText
-        return true
-    }
+ ### 비교3: 메모 추가 후 UI업데이트 
+```swift
+//RxSwift
+if let content = alertController.textFields?.first?.text, !content.isEmpty {
+    let newMemo = Memo(content: content)
+    var currentMemos = memos.value
+    currentMemos.append(newMemo)
+    memos.accept(currentMemos)
+}
+```
+```swift
+//Traditional
+if let content = alertController.textFields?.first?.text, !content.isEmpty {
+    let newMemo = Memo(content: content)
+    memos.append(newMemo)
+    tableView.reloadData()
 }
 ```
 
-2. RxSwift를 적용했을 때 코드
-```Swift
-import UIKit
-import RxSwift
-import RxCocoa
+#
 
-class ViewController: UIViewController {
-    
-    let textField = UITextField()
-    let label = UILabel()
-    let disposeBag = DisposeBag()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Bind the textField's text to the label using RxSwift
-        textField.rx.text
-            .bind(to: label.rx.text)
-            .disposed(by: disposeBag)
-    }
-}
-```
+### 후기
+- 관련된 유튜브 영상 및 블로그 자료를 찾아보고 토이프로젝트를 더 해봐야지 알 것 같다.
