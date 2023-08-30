@@ -12,9 +12,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Setup textField and label (add to view, set constraints, etc.)
-
         textField.delegate = self
     }
 
@@ -44,8 +41,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setup textField and label (add to view, set constraints, etc.)
-
         // Bind the textField's text to the label using RxSwift
         textField.rx.text
             .bind(to: label.rx.text)
