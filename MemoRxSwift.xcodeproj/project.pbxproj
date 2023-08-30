@@ -10,21 +10,19 @@
 		028183FF71665B8F0F2A9668 /* Pods_MemoRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B33C87F9BF7D628EC1BD417 /* Pods_MemoRxSwift.framework */; };
 		08AB122B2A9F122B0005608D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB122A2A9F122B0005608D /* AppDelegate.swift */; };
 		08AB122D2A9F122B0005608D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB122C2A9F122B0005608D /* SceneDelegate.swift */; };
-		08AB122F2A9F122B0005608D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB122E2A9F122B0005608D /* ViewController.swift */; };
-		08AB12322A9F122B0005608D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08AB12302A9F122B0005608D /* Main.storyboard */; };
+		08AB122F2A9F122B0005608D /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB122E2A9F122B0005608D /* MemoListViewController.swift */; };
 		08AB12342A9F122D0005608D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08AB12332A9F122D0005608D /* Assets.xcassets */; };
-		08AB12372A9F122D0005608D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08AB12352A9F122D0005608D /* LaunchScreen.storyboard */; };
+		08AB123F2A9F16000005608D /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB123E2A9F16000005608D /* MemoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08AB12272A9F122B0005608D /* MemoRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AB122A2A9F122B0005608D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08AB122C2A9F122B0005608D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08AB122E2A9F122B0005608D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		08AB12312A9F122B0005608D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		08AB122E2A9F122B0005608D /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		08AB12332A9F122D0005608D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		08AB12362A9F122D0005608D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08AB12382A9F122D0005608D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08AB123E2A9F16000005608D /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
 		1B33C87F9BF7D628EC1BD417 /* Pods_MemoRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		398BCAC80CF236E0543FC6A5 /* Pods-MemoRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoRxSwift.release.xcconfig"; path = "Target Support Files/Pods-MemoRxSwift/Pods-MemoRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		42E08D5D1380A1AFCC088862 /* Pods-MemoRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-MemoRxSwift/Pods-MemoRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,10 +63,9 @@
 			children = (
 				08AB122A2A9F122B0005608D /* AppDelegate.swift */,
 				08AB122C2A9F122B0005608D /* SceneDelegate.swift */,
-				08AB122E2A9F122B0005608D /* ViewController.swift */,
-				08AB12302A9F122B0005608D /* Main.storyboard */,
+				08AB122E2A9F122B0005608D /* MemoListViewController.swift */,
+				08AB123E2A9F16000005608D /* MemoModel.swift */,
 				08AB12332A9F122D0005608D /* Assets.xcassets */,
-				08AB12352A9F122D0005608D /* LaunchScreen.storyboard */,
 				08AB12382A9F122D0005608D /* Info.plist */,
 			);
 			path = MemoRxSwift;
@@ -80,7 +77,6 @@
 				42E08D5D1380A1AFCC088862 /* Pods-MemoRxSwift.debug.xcconfig */,
 				398BCAC80CF236E0543FC6A5 /* Pods-MemoRxSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,9 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08AB12372A9F122D0005608D /* LaunchScreen.storyboard in Resources */,
 				08AB12342A9F122D0005608D /* Assets.xcassets in Resources */,
-				08AB12322A9F122B0005608D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,32 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08AB122F2A9F122B0005608D /* ViewController.swift in Sources */,
+				08AB122F2A9F122B0005608D /* MemoListViewController.swift in Sources */,
+				08AB123F2A9F16000005608D /* MemoModel.swift in Sources */,
 				08AB122B2A9F122B0005608D /* AppDelegate.swift in Sources */,
 				08AB122D2A9F122B0005608D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		08AB12302A9F122B0005608D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08AB12312A9F122B0005608D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		08AB12352A9F122D0005608D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08AB12362A9F122D0005608D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		08AB12392A9F122D0005608D /* Debug */ = {
@@ -361,7 +337,6 @@
 				INFOPLIST_FILE = MemoRxSwift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -390,7 +365,6 @@
 				INFOPLIST_FILE = MemoRxSwift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
