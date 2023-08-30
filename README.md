@@ -29,6 +29,29 @@ memos.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: UITableViewC
 tableView.delegate = self
 tableView.dataSource = self
 ```
+- 바인딩된 `memos` 데이터를 즉각적으로 테이블뷰에 반영한다. 이렇게 함으로서 델리게이트와 소스를 없애줄 수 있다.
+- 기존에는 `viewDidLoad()`에 delegate와 source를 넣는 델리게이트 패턴을 구현해야했음(테이블뷰), 아래에 필수구현 메서드까지 적는건 덤
+
+#
+
+### 비교3: 메모추가 후 UI업데이트
+```Swift
+if let content = alertController.textFields?.first?.text, !content.isEmpty {
+    let newMemo = Memo(content: content)
+    var currentMemos = memos.value
+    currentMemos.append(newMemo)
+    memos.accept(currentMemos)
+}
+```
+```Swift
+if let content = alertController.textFields?.first?.text, !content.isEmpty {
+    let newMemo = Memo(content: content)
+    memos.append(newMemo)
+    tableView.reloadData()
+}
+```
+
+
 
 #
 
