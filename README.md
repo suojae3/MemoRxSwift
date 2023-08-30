@@ -73,6 +73,7 @@ if let content = alertController.textFields?.first?.text, !content.isEmpty {
     tableView.reloadData()
 }
 ```
+- `memos` 데이터는 관찰되고 있기 때문에 따로 `reloadData()`를 해줄 필요가 없음
 
 #
 
